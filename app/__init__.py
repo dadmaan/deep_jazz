@@ -5,27 +5,27 @@ from bs4 import BeautifulSoup
 import tensorflow as tf
 import streamlit as st
 
-# from modules.utils import *
+from modules.utils import *
 
 BATCH_SIZE = 128
 TEXT_FILE = 'dataset/tunes_v2.txt'
 VOCAB_FILE = 'dataset/vocab_v2.json'
 
 # load dataset
-# ds = TextDatasetLoader(sequence_length=143,
-#                        batch_size=BATCH_SIZE,
-#                        buffer_size=1,
-#                        text_dir=TEXT_FILE,
-#                        output_dir=VOCAB_FILE,
-#                        dataset_size='full')
-# data_small = ds.load_dataset()
-# vocab = ds.load_vocab(VOCAB_FILE)
-# vocab_length = len(vocab)
-# char2idx = ds.char2index(vocab)
-# idx2char = ds.index2char(vocab)
+ds = TextDatasetLoader(sequence_length=143,
+                       batch_size=BATCH_SIZE,
+                       buffer_size=1,
+                       text_dir=TEXT_FILE,
+                       output_dir=VOCAB_FILE,
+                       dataset_size='full')
+data_small = ds.load_dataset()
+vocab = ds.load_vocab(VOCAB_FILE)
+vocab_length = len(vocab)
+char2idx = ds.char2index(vocab)
+idx2char = ds.index2char(vocab)
 
 # load model
-# model = tf.keras.models.load_model(os.path.join("model", "music_composer_jazz4_lstm"))
+model = tf.keras.models.load_model(os.path.join("model", "music_composer_jazz4_lstm"))
 
 st.title("Deep Jazz Composer")
 
