@@ -1,6 +1,6 @@
 import os
 import pathlib
-# from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup
 
 import tensorflow as tf
 import streamlit as st
