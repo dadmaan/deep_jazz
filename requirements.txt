@@ -1,5 +1,5 @@
 streamlit==0.72.0
-tensorflow
+tensorflow-cpu
 # numpy==1.19.0
 Keras==2.4.3
 beautifulsoup4==4.9.3
